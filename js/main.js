@@ -22,7 +22,7 @@ function displayInnerSpinner() {
 }
 
 // ^get width of side navbar
-const navWidth = $("header").width() - $(".navIcons").width();
+const navWidth = $("header").width() - 60;
 const navLinks = $(".nav-item");
 
 // ^ function that opens side nav when user click on menuBtn
@@ -409,6 +409,10 @@ function displaySignUpSec() {
 
       // &fire validation on keyup
       fireValidation();
+
+      $(".signUpForm form").submit((e) => {
+        e.preventDefault();
+      });
     });
   });
 }
@@ -580,7 +584,7 @@ function validateEmail() {
 }
 
 function validateMob() {
-  const regex = /^(01)[0125][0-9]{8}$/gm;
+  const regex = /^(\+2){0,1}(01)[0125][0-9]{8}$/gm;
   return regex.test($(".mobileNo").val());
 }
 

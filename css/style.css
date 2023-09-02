@@ -106,10 +106,10 @@ header {
   max-width: 250px;
 }
 
-.navIcons {
+.navIcons,
+.mobileBtn {
   width: 60px !important;
 }
-
 .nav-link {
   font-size: 17px;
   -webkit-transition: color 300ms;
